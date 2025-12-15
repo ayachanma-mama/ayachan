@@ -98,9 +98,13 @@ animation: jump 10s steps(1) infinite;}
   display: flex;
   align-items: center;
   justify-content: center;
+	max-width: 420px;
+	margin: 0 auto;
+	position: relative;
 }
 
 .episode-slider {
+	width: 100%;
   overflow: hidden;
 }
 
