@@ -183,16 +183,27 @@ footer {
   color: #555;
 }
 
+:root {
+	--visible-count: 1;
+}
+
 @media (max-width: 768px) {
-	
+	:root {
+		--visible-count: 2;
+	}
 	.episode-slider-container {
 		max-width: 900px;}
   .episode-slider {
+	  overflow: hidden;
     width: 95%;
   }
-
+.episode-slides {
+	display: flex;
+	transition: transform 0.4s ease;
+}
   .episode-card {
-		width: 50%}
+	  flex-shrink: 0;
+		width: calc(100% / var(--visible-count));}
 
   .episode-btn {
     font-size: 1.4rem;
