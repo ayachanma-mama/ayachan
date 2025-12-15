@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  background: #f7fff9;
+  color: #333;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url("https://github.com/ayachanma-mama/ayachan/blob/main/IMG_9121.jpeg");
+  background-size: cover;
+	background-position: center 65%;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  color: #a2e29b;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 4.0rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0,0,0,1);
+  font-family: "Caveat", cursive; 
+}
+
+.hero-text p {
+  margin-top: 10px;
+  font-size: 2.0rem;
+text-shadow: 0 0 10px rgba(0,0,0,1);
+font-family: "Mochiy Pop One", cursive;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 15px;
+  font-size: 2rem;
+  opacity: 1;
+  animation: bounce 1.8s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.intro {
+  margin-top: -36px;
+padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #d9faff, #eaffea);
+  font-size: 3.0rem;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.intro-text p {
+  margin-top: 10px;
+  font-size: 3.0rem;
+font-family: "Mochiy Pop One", cursive;
+animation: jump 10s steps(1) infinite;}
+
+@keyframes jump {
+	0% {color: #ed1A3D; background : none;}
+	12.5% {color: #ffb2c1; background : none;}
+	25% {color: #ff9f67; background : none;}
+	37.5% {color: #1665cc; background : none;}
+	50% {color: #b473bf; background : none;}
+	62.5% {color: #ffd673; background : none;}
+	75% {color: #a2e29b; background : none;}
+	87.5% {background :linear-gradient(90deg, #ed1A3D, #ed1A3D, #ffb2c1, #ff9f67, #1665cc, #b473bf, #ffd673, #a2e29b, #a2e29b);
+		-webkit-background-clip: text;
+		back-ground-clip: text;
+		color: transparent;
+	transform: translateY(0);}
+	90.625% { transform: translateY(-8px); }
+	93.75% { transform: translateY(0); }
+	96.875% { transform: translateY(-8px); }
+	100% { transform: translateY(0); }
+}
+
+
+.episodes {
+  padding: 60px 20px;
+  background: linear-gradient(90deg, #e7fff7, #dffaff);
+  text-align: center;
+}
+
+.episodes h2 {
+  margin-bottom: 25px;
+  color: #56b5a3;
+}
+
+.episode-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.episode-slider {
+  width: 80%;
+  overflow: hidden;
+}
+
+.episode-slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.episode-card {
+  min-width: 280px;
+  max-width: 280px;
+  background: #ffffff;
+  border-radius: 14px;
+  margin: 0 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: left;
+}
+
+.episode-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.episode-card h3 {
+  margin: 15px 15px 5px;
+  color: #44a093;
+  font-size: 1.1rem;
+}
+
+.episode-card p {
+  padding: 0 15px 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.episode-btn {
+  background: #bdf3d2;
+  border: none;
+  padding: 12px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.episode-btn:hover {
+  background: #9ae9bf;
+}
+
+.message {
+  padding: 80px 20px;
+  text-align: center;
+  background: #eafff6;
+}
+
+.message h2 {
+  color: #5bc0be;
+}
+
+.message p {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+footer {
+  background: #b9ffe1;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+
+  .episode-slider {
+    width: 95%;
+  }
+
+  .episode-card {
+    min-width: 85%;
+    max-width: 85%;
+  }
+
+  .episode-btn {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
+}
