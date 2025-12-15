@@ -110,15 +110,13 @@ animation: jump 10s steps(1) infinite;}
 }
 
 .episode-card {
-  min-width: 280px;
-  max-width: 280px;
+ flex: 0 0 100%;
   background: #ffffff;
   border-radius: 14px;
   margin: 0 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow: hidden;
   text-align: left;
-	flex: 0 0 100%;
 }
 
 .episode-card img {
