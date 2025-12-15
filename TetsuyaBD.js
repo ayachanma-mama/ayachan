@@ -11,7 +11,7 @@ let index = 0;
 
 function updateSlide() {
   const slideWidth = cards[0].offsetWidth;
-  slides.style.transform = `translateX(-${index * slideWidth}px)`;
+  slides.style.transform = `translateX(-${index * 100}%)`;
 
   prevBtn.disabled = index === 0;
   nextBtn.disabled = index === cards.length - 1;
