@@ -143,11 +143,7 @@ animation: jump 10s steps(1) infinite;}
   line-height: 1.6;
   color: #555;
 }
-@media(min-width: 768px) {
-	.episode-card {
-		width: 50%}
-	.episode-slider-container {
-		max-width: 900px;}
+
 	
 .episode-btn {
   background: #bdf3d2;
@@ -188,15 +184,15 @@ footer {
 }
 
 @media (max-width: 768px) {
-
+	
+	.episode-slider-container {
+		max-width: 900px;}
   .episode-slider {
     width: 95%;
   }
 
   .episode-card {
-    min-width: 85%;
-    max-width: 85%;
-  }
+		width: 50%}
 
   .episode-btn {
     font-size: 1.4rem;
