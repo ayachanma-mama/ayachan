@@ -110,7 +110,7 @@ animation: jump 10s steps(1) infinite;}
 }
 
 .episode-card {
- width: 100%;
+ width: 300px;
 	flex-shrink: 0;
   background: #ffffff;
   border-radius: 14px;
