@@ -4,25 +4,39 @@ const prevBtn = document.querySelector(".episode-prev");
 const nextBtn = document.querySelector(".episode-next");
 
 let index = 0;
-const maxIndex = cards.length - 1;
 
-function updateSlide() {
-  slides.style.transform = `translateX(-${index * 100}%)`;
+function getVisibleCount() {
+  return window.innerWidth >= 768 ? 2 : 1;
 }
 
-nextBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (index < maxIndex) {
+function updateSlide() {
+  const visible = getVisibleCount();
+  slides.style.transform = `translateX(-${index * (100 / visible)}%)`;
+}
+
+function getMaxIndex() {
+  return cards.length - getVisibleCount();
+}
+
+nextBtn.addEventListener("click", () => {
+  const max = getMaxIndex();
+  if (index < max) {
     index++;
     updateSlide();
   }
 });
 
-prevBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+prevBtn.addEventListener("click", () => {
   if (index > 0) {
     index--;
     updateSlide();
   }
 });
 
+window.addEventListener("resize", () => {
+  const max = getMaxIndex();
+  if (index > max) index = max;
+  updateSlide();
+});
+
+updateSlide();
