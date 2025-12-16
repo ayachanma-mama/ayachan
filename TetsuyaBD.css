@@ -64,22 +64,22 @@ body {
 }
 
 @keyframes jump {
-  0% { color:#ed1A3D; }
-  12.5% { color:#ffb2c1; }
-  25% { color:#ff9f67; }
-  37.5% { color:#1665cc; }
-  50% { color:#b473bf; }
-  62.5% { color:#ffd673; }
-  75% { color:#a2e29b; }
-  87.5% {
-    background: linear-gradient(90deg,#ed1A3D,#ffb2c1,#ff9f67,#1665cc,#b473bf,#ffd673,#a2e29b);
-    -webkit-background-clip: text;
-    color: transparent;
-  transform: translateY(0);}
-  90.625% { transform: translateY(-8px); }
-  93.75% { transform: translateY(0); }
-  96.875% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
+	0% {color: #ed1A3D; background : none;}
+	12.5% {color: #ffb2c1; background : none;}
+	25% {color: #ff9f67; background : none;}
+	37.5% {color: #1665cc; background : none;}
+	50% {color: #b473bf; background : none;}
+	62.5% {color: #ffd673; background : none;}
+	75% {color: #a2e29b; background : none;}
+	87.5% {background :linear-gradient(90deg, #ed1A3D, #ed1A3D, #ffb2c1, #ff9f67, #1665cc, #b473bf, #ffd673, #a2e29b, #a2e29b);
+		-webkit-background-clip: text;
+		back-ground-clip: text;
+		color: transparent;
+	transform: translateY(0);}
+	90.625% { transform: translateY(-8px); }
+	93.75% { transform: translateY(0); }
+	96.875% { transform: translateY(-8px); }
+	100% { transform: translateY(0); }
 }
 
 
