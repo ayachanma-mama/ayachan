@@ -76,10 +76,10 @@ body {
     -webkit-background-clip: text;
     color: transparent;
   transform: translateY(0);}
-  93.75%,100% { transform: translateY(0); }
-  90.625%,96.875% { transform: translateY(8px); }
-}
-
+  90.625% { transform: translateY(-8px); }
+  93.75% { transform: translateY(0); }
+  96.875% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 }
 
 
