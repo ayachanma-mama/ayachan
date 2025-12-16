@@ -107,6 +107,10 @@ animation: jump 10s steps(1) infinite;}
 	overflow: hidden;
 	width: 100%;
 }
+.episode-slider-wrapper {
+	width: 100%;
+	max-width: 420px;
+	overflow: hidden;}
 
 .episode-slides {
   display: flex;
@@ -189,7 +193,8 @@ footer {
 	margin: 0 auto;}
   .episode-card {
 		width: 50%;}
-
+.episode-slider-wrapper {
+	max-width: 900px;}
   .episode-btn {
     font-size: 1.4rem;
     padding: 10px;
