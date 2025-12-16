@@ -5,15 +5,19 @@ const nextBtn = document.querySelector(".episode-next");
 
 let index = 0;
 
-function updateSlide() {
-  slides.style.transform = `translateX(-${index * 100}%)`;
+function getCardWidth() {
+  return cards[0].getBoundingClientRect().width;
 }
 
 function getMaxIndex() {
-  // PCは最後の1枚を表示するため -1
-  return window.innerWidth >= 768
-    ? cards.length - 2
-    : cards.length - 1;
+  const visibleCount = window.innerWidth >= 768 ? 2 : 1;
+  return cards.length - visibleCount;
+}
+
+function updateSlide() {
+  const moveX = index * getCardWidth();
+  slides.style.transform = `translateX(-${moveX}px)`;
+
 }
 
 nextBtn.addEventListener("click", () => {
@@ -38,3 +42,4 @@ window.addEventListener("resize", () => {
 });
 
 updateSlide();
+
