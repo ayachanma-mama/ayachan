@@ -115,7 +115,6 @@ animation: jump 10s steps(1) infinite;}
 .episode-slides {
   display: flex;
   transition: transform 0.5s ease;
-	gap: 24px;
 }
 
 .episode-card {
@@ -199,10 +198,11 @@ footer {
 	.episode-slider-container {
 		max-width: 900px;
 	margin: 0 auto;}
+	.episode-slides {gap: 24px;}
   .episode-card {
-	  flex: 0 0 44%;}
+	  flex: 0 0 40%;}
 .episode-slider-wrapper {
-	max-width: 900px;}
+	max-width: 820px;}
   .episode-btn {
     font-size: 1.4rem;
     padding: 10px;
