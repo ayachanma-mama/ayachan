@@ -5,17 +5,15 @@ const nextBtn = document.querySelector(".episode-next");
 
 let index = 0;
 
-function getVisibleCount() {
-  return window.innerWidth >= 768 ? 2 : 1;
-}
-
 function updateSlide() {
-  const visible = getVisibleCount();
-  slides.style.transform = `translateX(-${index * (100 / visible)}%)`;
+  slides.style.transform = `translateX(-${index * 100}%)`;
 }
 
 function getMaxIndex() {
-  return cards.length - getVisibleCount();
+  // PCは最後の1枚を表示するため -1
+  return window.innerWidth >= 768
+    ? cards.length - 2
+    : cards.length - 1;
 }
 
 nextBtn.addEventListener("click", () => {
