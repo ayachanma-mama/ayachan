@@ -192,21 +192,34 @@ body {
 .message {
   padding: 60px 20px;
   text-align: center;
-  background: #eafff6;
+  background: #f1fff8;
 }
 
 .message h2 {
-  color: #5bc0be;
-	margin-bottom: 30px;
+  color: #56b5a3;
+	margin-bottom: 32px;
 }
 
 .message p {
+	list-style: none;
   max-width: 520px;
 	margin: 0 auto;
-	padding-left:1.2em;
+	padding:0;
+	position: relative;
 }
-.message li{
-	margin-bottom: 14px;
+.message-simple::before {
+	content: "";
+	position: absolute;
+	left: 10px;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: #c9f1dd;}
+
+.message-simple li{
+	position:relative;
+	padding: 0 0 0 36px;
+	margin-bottom: 16px;
 	font-size: 1.05rem;
 	line-height: 1.8;
 }
