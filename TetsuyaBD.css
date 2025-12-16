@@ -187,9 +187,17 @@ body {
 
 .message {
   padding: 80px 20px;
-  background: #eafff6;
   text-align: center;
-  color: #56b5a3;
+  background: #eafff6;
+}
+
+.message h2 {
+  color: #5bc0be;
+}
+
+.message p {
+  font-size: 1.2rem;
+  line-height: 2;
 }
 
 footer {
