@@ -230,6 +230,7 @@ body {
 .setlist h2 {
   color: #56b5a3;
 	margin-bottom: 32px;
+	text-align: center;
 }
 
 .setlist-columns {
