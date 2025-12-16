@@ -185,6 +185,20 @@ body {
     font-size: 1.4rem;
     padding: 10px;
   }
+	.setlist {
+		display: flex;
+		justify-content: center;}
+	.setlist-simple {
+		background: #ffffff;
+		padding: 40px 48px;
+		border-radius: 18px;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);}
+	.setlist-simple::before {
+		left: 28px;}
+	.setlist-simple li {
+		padding-left: 56px;}
+	.setlist-simple li::before {
+		left: 18px;}
 }
 
 
