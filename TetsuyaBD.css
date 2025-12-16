@@ -200,7 +200,8 @@ footer {
 		max-width: 900px;
 	margin: 0 auto;}
   .episode-card {
-		flex: 0 0 45%;}
+		width: 50%;
+	  flex: 0 0 45%;}
 .episode-slider-wrapper {
 	max-width: 900px;}
   .episode-btn {
