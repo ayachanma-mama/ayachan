@@ -75,7 +75,11 @@ body {
     background: linear-gradient(90deg,#ed1A3D,#ffb2c1,#ff9f67,#1665cc,#b473bf,#ffd673,#a2e29b);
     -webkit-background-clip: text;
     color: transparent;
-  }
+  transform: translateY(0);}
+  93.75%,100% { transform: translateY(0); }
+  90.625%,96.875% { transform: translateY(8px); }
+}
+
 }
 
 
