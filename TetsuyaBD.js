@@ -1,56 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelector(".episode-slides");
-  const slideItems = document.querySelectorAll(".episode-slide");
+  const cards = document.querySelectorAll(".episode-card");
   const prevBtn = document.querySelector(".episode-prev");
   const nextBtn = document.querySelector(".episode-next");
 
-  let currentIndex = 0;
+  let index = 0;
 
-  function getVisibleCount() {
+  function visibleCount() {
     return window.innerWidth >= 768 ? 2 : 1;
   }
 
-  function getSlideWidth() {
-    const slide = slideItems[0];
-    const style = getComputedStyle(slide);
-
-    const width = slide.offsetWidth;
-    const margin =
-      parseFloat(style.marginLeft) + parseFloat(style.marginRight);
-
-    return width + margin;
+  function maxIndex() {
+    return cards.length - visibleCount();
   }
 
-  function updatePosition() {
-    const slideWidth = getSlideWidth();
-    slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-  }
-
-  function getMaxIndex() {
-    return slideItems.length - getVisibleCount();
+  function update() {
+    const movePercent = 100 / visibleCount();
+    slides.style.transform = `translateX(-${index * movePercent}%)`;
   }
 
   nextBtn.addEventListener("click", () => {
-    if (currentIndex < getMaxIndex()) {
-      currentIndex++;
-      updatePosition();
+    if (index < maxIndex()) {
+      index++;
+      update();
     }
   });
 
   prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updatePosition();
+    if (index > 0) {
+      index--;
+      update();
     }
   });
 
   window.addEventListener("resize", () => {
-    const maxIndex = getMaxIndex();
-    if (currentIndex > maxIndex) {
-      currentIndex = maxIndex;
+    if (index > maxIndex()) {
+      index = maxIndex();
     }
-    updatePosition();
+    update();
   });
 
-  updatePosition();
+  update();
 });
