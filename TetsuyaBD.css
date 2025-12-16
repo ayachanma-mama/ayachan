@@ -195,13 +195,10 @@ footer {
 
 @media (min-width: 768px) {
 	.episode-slider-container {
-		max-width: 900px;
-	margin: 0 auto;}
+		max-width: 900px;}
   .episode-card {
 	  width: 50%;
-	  padding-right: 24px;
-	  box-sizing: border-box;
-	  flex: 0 0 calc((100%-32px) /2);}
+	  }
 .episode-slider-wrapper {
 	max-width: 860px;}
   .episode-btn {
