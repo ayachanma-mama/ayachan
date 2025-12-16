@@ -95,12 +95,12 @@ animation: jump 10s steps(1) infinite;}
 }
 
 .episode-slider-container {
-  display: flex;
+  position: relative;
+	display: flex;
   align-items: center;
   justify-content: center;
 	max-width: 420px;
 	margin: 0 auto;
-	position: relative;
 }
 
 .episode-slider {
@@ -150,7 +150,12 @@ flex-shrink: 0;
 
 	
 .episode-btn {
-  background: #bdf3d2;
+  position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	
+	background: #bdf3d2;
   border: none;
   padding: 12px;
   font-size: 1.8rem;
@@ -159,7 +164,10 @@ flex-shrink: 0;
   margin: 0 10px;
   transition: 0.3s;
 }
-
+.episode-prev {
+	left: -24px;}
+.episode-next{
+	right:-24px;}
 .episode-btn:hover {
   background: #9ae9bf;
 }
@@ -192,7 +200,7 @@ footer {
 		max-width: 900px;
 	margin: 0 auto;}
   .episode-card {
-		width: 50%;}
+		flex: 0 0 45%;}
 .episode-slider-wrapper {
 	max-width: 900px;}
   .episode-btn {
