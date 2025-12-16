@@ -126,6 +126,8 @@ animation: jump 10s steps(1) infinite;}
   overflow: hidden;
   text-align: left;
 }
+.episode-card-inner {
+	padding: 12px;}
 
 .episode-card img {
   width: 100%;
