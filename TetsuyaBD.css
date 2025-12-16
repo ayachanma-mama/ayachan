@@ -188,18 +188,35 @@ body {
 	.setlist {
 		display: flex;
 		justify-content: center;}
+	.setlist-columns {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 64px;
+		max-width: 880px;
+		margin:0 auto;}
 	.setlist-simple {
-		max-width: 720px;
-		background: #ffffff;
-		padding: 44px 64px;
-		border-radius: 18px;
-		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);}
+		margin-bottom: 0;
+	}
 	.setlist-simple::before {
-		left: 28px;}
+		display: none;}
 	.setlist-simple li {
-		padding-left: 56px;}
-	.setlist-simple li::before {
-		left: 18px;}
+		padding-left: 36px;}
+	.setlist-simple li::nth-child(odd)::after {
+		content: "";
+		position: absolute;
+		left: 10px;
+		top: -12px;
+		bottom: -12px;
+		width: 2px;
+		background: #c9f1dd;}
+	.setlist-simple li::nth-child(even)::after {
+		content: "";
+		position: absolute;
+		left: calc(50% + 32px);
+		top: -12px;
+		bottom: -12px;
+		width: 2px;
+		background: #c9f1dd;}
 }
 
 
@@ -214,6 +231,9 @@ body {
   color: #56b5a3;
 	margin-bottom: 32px;
 }
+
+.setlist-columns {
+	display: block;}
 
 .setlist-simple {
 	list-style: none;
