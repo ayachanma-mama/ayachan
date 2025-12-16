@@ -109,7 +109,7 @@ animation: jump 10s steps(1) infinite;}
 }
 .episode-slider-wrapper {
 	width: 100%;
-	max-width: 420px;
+	max-width: 360px;
 	overflow: hidden;}
 
 .episode-slides {
@@ -118,9 +118,7 @@ animation: jump 10s steps(1) infinite;}
 }
 
 .episode-card {
-	margin: 0;
-flex-shrink: 0;
-	box-sizing: border-box;
+flex: 0 0 100%;
   background: #ffffff;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -198,11 +196,11 @@ footer {
 	.episode-slider-container {
 		max-width: 900px;
 	margin: 0 auto;}
-	.episode-slides {gap: 24px;}
+	.episode-slides {gap: 32px;}
   .episode-card {
-	  flex: 0 0 40%;}
+	  flex: 0 0 calc((100%-32px) /2);}
 .episode-slider-wrapper {
-	max-width: 820px;}
+	max-width: 860px;}
   .episode-btn {
     font-size: 1.4rem;
     padding: 10px;
