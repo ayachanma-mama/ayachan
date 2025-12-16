@@ -175,7 +175,6 @@ body {
   padding: 60px 20px;
   text-align: center;
   background: #f1fff8;
-	display: block;
 }
 
 .setlist h2 {
@@ -193,7 +192,6 @@ body {
   max-width: 520px;
 	margin: 0 auto;
 	padding:0;
-	position: relative;
 }
 
 .setlist-simple li{
@@ -234,9 +232,7 @@ footer {
     font-size: 1.4rem;
     padding: 10px;
   }
-	.setlist {
-		display: flex;
-		justify-content: center;}
+
 	.setlist-columns {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -247,8 +243,4 @@ footer {
 		max-width: none;
 		margin-bottom: 0;
 	}
-	.setlist-simple::before {
-		display: none;}
-	.setlist-simple li {
-		padding-left: 36px;}
 }
