@@ -190,18 +190,25 @@ body {
 
 
 .message {
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
   background: #eafff6;
 }
 
 .message h2 {
   color: #5bc0be;
+	margin-bottom: 30px;
 }
 
 .message p {
-  font-size: 1.2rem;
-  line-height: 2;
+  max-width: 520px;
+	margin: 0 auto;
+	padding-left:1.2em;
+}
+.message li{
+	margin-bottom: 14px;
+	font-size: 1.05rem;
+	line-height: 1.8;
 }
 
 footer {
